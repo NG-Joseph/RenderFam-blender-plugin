@@ -1,0 +1,24 @@
+{
+  "name": "express-server",
+  "version": "0.0.1",
+  "description": "server for handling renderfam operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/server.js"
+  },
+  "keywords": [
+    "3d",
+    "blender",
+    "server",
+    "express"
+  ],
+  "author": "Joseph Nwokotubo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
