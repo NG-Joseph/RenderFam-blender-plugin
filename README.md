@@ -1,4 +1,4 @@
-# RenderFam-blender-plugin
+# RenderFam-blender-addon
 Blender addon for P2P file sharing and 3D rendering via LAN or Cloud
 
 ## Project Mockup so far
