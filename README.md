@@ -10,4 +10,6 @@ Blender addon for P2P file sharing and 3D rendering via LAN or Internet
 3. `cd RenderFam/express-server && npm run start`
 4. Download [Blender Development](https://marketplace.visualstudio.com/items?itemName=JacquesLucke.blender-development) extension.
 5. Ctrl + Shift + P => Blender: Start
+
+
 The folder named '2.93' is part of an integration for blender code autocomplete. Check outhttps://github.com/Korchy/blender_autocomplete for steps if you have any problems setting yours up.
