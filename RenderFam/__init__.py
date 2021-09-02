@@ -12,14 +12,14 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bl_info = {
-    "name" : "Render Fam",
+    "name" : "RenderFam",
     "author" : "Joseph Nwokotubo",
     "description" : "",
     "blender" : (2, 93, 0),
     "version" : (0, 0, 1),
     "location" : "",
     "warning" : "",
-    "category" : "Generic"
+    "category" : "Import-Export/Render"
 }
 
 from . import auto_load

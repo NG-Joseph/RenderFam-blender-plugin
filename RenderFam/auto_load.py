@@ -1,3 +1,5 @@
+#
+
 import os
 import bpy
 import sys
@@ -15,18 +17,18 @@ __all__ = (
 
 blender_version = bpy.app.version
 
-modules = None
-ordered_classes = None
+modules = ['blender_client']
+ORDERED_CLASSES = ["global-parent-panel"]
 
 def init():
     global modules
-    global ordered_classes
+    global ORDERED_CLASSES
 
     modules = get_all_submodules(Path(__file__).parent)
-    ordered_classes = get_ordered_classes_to_register(modules)
+    ORDERED_CLASSES = get_ORDERED_CLASSES_to_register(modules)
 
 def register():
-    for cls in ordered_classes:
+    for cls in ORDERED_CLASSES:
         bpy.utils.register_class(cls)
 
     for module in modules:
@@ -36,7 +38,7 @@ def register():
             module.register()
 
 def unregister():
-    for cls in reversed(ordered_classes):
+    for cls in reversed(ORDERED_CLASSES):
         bpy.utils.unregister_class(cls)
 
     for module in modules:
@@ -69,7 +71,7 @@ def iter_submodule_names(path, root=""):
 # Find classes to register
 #################################################
 
-def get_ordered_classes_to_register(modules):
+def get_ORDERED_CLASSES_to_register(modules):
     return toposort(get_register_deps_dict(modules))
 
 def get_register_deps_dict(modules):
