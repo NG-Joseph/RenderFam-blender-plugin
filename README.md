@@ -12,4 +12,4 @@ Blender addon for P2P file sharing and 3D rendering via LAN or Internet
 5. Ctrl + Shift + P => Blender: Start
 
 
-The folder named '2.93' is part of an integration for blender code autocomplete. Check outhttps://github.com/Korchy/blender_autocomplete for steps if you have any problems setting yours up.
+The folder named '2.93' is part of an integration for blender code autocomplete. Check out https://github.com/Korchy/blender_autocomplete for steps if you have any problems setting yours up.
