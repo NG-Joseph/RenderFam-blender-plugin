@@ -8,6 +8,8 @@ import inspect
 import pkgutil
 import importlib
 from pathlib import Path
+from .blender_client import MyProperties
+
 
 __all__ = (
     "init",
@@ -30,6 +32,7 @@ def init():
 def register():
     for cls in ORDERED_CLASSES:
         bpy.utils.register_class(cls)
+    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MyProperties)
 
     for module in modules:
         if module.__name__ == __name__:
@@ -40,6 +43,8 @@ def register():
 def unregister():
     for cls in reversed(ORDERED_CLASSES):
         bpy.utils.unregister_class(cls)
+
+    del bpy.types.Scene.my_tool
 
     for module in modules:
         if module.__name__ == __name__:
