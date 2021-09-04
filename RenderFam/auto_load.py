@@ -8,7 +8,7 @@ import inspect
 import pkgutil
 import importlib
 from pathlib import Path
-from .blender_client import MyProperties
+from .blender_client import MyProperties, ListItem
 
 
 __all__ = (
@@ -32,7 +32,9 @@ def init():
 def register():
     for cls in ORDERED_CLASSES:
         bpy.utils.register_class(cls)
-    bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MyProperties)
+    bpy.types.Scene.ui_properties = bpy.props.PointerProperty(type=MyProperties)
+    bpy.types.Scene.peer_list = bpy.props.CollectionProperty(type=ListItem)
+    bpy.types.Scene.list_index = bpy.props.IntProperty(name="Index for my_list", default=0)
 
     for module in modules:
         if module.__name__ == __name__:
@@ -44,7 +46,9 @@ def unregister():
     for cls in reversed(ORDERED_CLASSES):
         bpy.utils.unregister_class(cls)
 
-    del bpy.types.Scene.my_tool
+    del bpy.types.Scene.ui_properties
+    del bpy.types.Scene.peer_list
+    del bpy.types.Scene.list_index
 
     for module in modules:
         if module.__name__ == __name__:
