@@ -1,5 +1,5 @@
 # RenderFam-blender-addon
-Blender addon for P2P file sharing and 3D rendering via WLAN or Cloud
+Blender addon for P2P file sharing and 3D rendering 
 
 ## Project Mockup so far
 - [Figma](https://www.figma.com/file/jUSwQn7ZRuWmToJTdD0E8b/Untitled?node-id=0%3A1)
